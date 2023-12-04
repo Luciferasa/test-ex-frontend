@@ -35,4 +35,4 @@ pnpm dev
 > Проверена работа и с [create-vite](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) и с [CRA](https://create-react-app.dev/docs/getting-started/).
 > `HMR` работает в обоих вариантах.
 > Основное условие для стабильной работы использовать для установки [pnpm](https://pnpm.io/).
-> Сайт [pnpm](https://pnpm.io/) доступен `VPN-only`
+> Сайт [pnpm](https://pnpm.io/) доступен `VPN-only` из РФ. Для остальных стран свободно.
