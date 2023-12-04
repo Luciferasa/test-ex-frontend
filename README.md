@@ -41,3 +41,6 @@ pnpm dev
 
 1. Создать в `packages/frontend` проект. Для этого из корня репозитория запускаем `pnpm create vite packages/frontend --template=react-ts`
 2. Выполнить условия тестового задания.
+
+> Для того чтобы найти команды запуска/остановки эмуляции анализа нужно обратить внимание на строки `59, 60, 67` в `packages/backend/src/index.ts`.
+> Для работы с websocket на фронтенде нужно установить `socket.io` и использовать согласно [документации](https://socket.io/docs/v4/client-api/)
