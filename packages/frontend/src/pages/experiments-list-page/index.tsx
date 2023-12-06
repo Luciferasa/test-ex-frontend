@@ -13,7 +13,7 @@ const ExperimentsListPage = () => {
         <div
           key={experiment.id}
           className="experiment"
-          onClick={() => navigate(`/experiment-detail/${experiment.id}`)}
+          onClick={() => navigate('/experiment-detail/')}
         >
           {experiment.name}
         </div>
