@@ -4,23 +4,25 @@ import DevicePage from './pages/device-page/index';
 import ExperimentDetailsPage from './pages/experiment-details-page/index';
 import ExperimentsListPage from './pages/experiments-list-page/index';
 
-import './App.css'
+import './App.scss';
 
 const App = () => {
   return (
     <div className="container">
       <Router>
-        <nav>
-          <div className="slide-menu">
+        <aside className="aside">
+          <nav className="aside-menu">
             <Link to="/">Главная</Link>
             <Link to="/experiments-list">Список экспериментов</Link>
-            <Link to="/experiment-detail">Детали эксперимента</Link>
-          </div>
-        </nav>
+          </nav>
+        </aside>
         <Routes>
           <Route path="/" element={<DevicePage />} />
           <Route path="/experiments-list" element={<ExperimentsListPage />} />
-          <Route path="/experiment-detail/:id" element={<ExperimentDetailsPage />} />
+          <Route
+            path="/experiment-detail/:id"
+            element={<ExperimentDetailsPage />}
+          />
         </Routes>
       </Router>
     </div>

@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { experiments, ExperimentsType } from '../../data';
 
-import './style.css';
+import './style.scss';
 
 const ExperimentsListPage = () => {
   const navigate = useNavigate();
@@ -10,12 +10,16 @@ const ExperimentsListPage = () => {
   return (
     <div className="experiments-list">
       {experiments.map((experiment: ExperimentsType) => (
-        <div key={experiment.id} className="experiment" onClick={() => navigate(`/experiment-detail/${experiment.id}`)}>
+        <div
+          key={experiment.id}
+          className="experiment"
+          onClick={() => navigate(`/experiment-detail/${experiment.id}`)}
+        >
           {experiment.name}
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
 export default ExperimentsListPage;

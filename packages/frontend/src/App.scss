@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+}
+
+.aside {
+  &-menu {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100vh;
+    align-items: center;
+    gap: 20px;
+    background: #e0dfdc;
+  }
+}

@@ -1,7 +1,7 @@
 export type ExperimentsType = {
   name: string;
   id: number;
-}
+};
 
 export const experiments: ExperimentsType[] = [
   {
@@ -15,5 +15,5 @@ export const experiments: ExperimentsType[] = [
   {
     name: 'Эксперимент 3',
     id: 3,
-  }
-]
+  },
+];
