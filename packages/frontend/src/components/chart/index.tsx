@@ -93,7 +93,7 @@ export const Chart: React.FC<ChartProps> = ({ messages }) => {
     });
   }, [messages]);
 
-  return <div ref={chart} style={{ width: '600px', height: '500px' }}></div>;
+  return <div ref={chart} className="chart"></div>;
 };
 
 export default Chart;

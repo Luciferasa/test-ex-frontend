@@ -1,6 +1,15 @@
 import { CSVLink } from 'react-csv';
 
-export const DownloadCsvButton = ({ sensors, data }) => {
+export type DownloadCsvButtonProps = {
+  data: {
+    [timestamp: string]: {
+      [sensorId: string]: number;
+    }
+  };
+  sensors: string[];
+};
+
+export const DownloadCsvButton: React.FC<DownloadCsvButtonProps> = ({ sensors, data }) => {
   const firstRow = ['Время', ...sensors.map((sensor) => `Сенсор ${sensor}`)];
 
   const csvData = [

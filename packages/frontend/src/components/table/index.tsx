@@ -1,6 +1,8 @@
 import type { MessageType } from '../experiment-control-button';
 import { DownloadCsvButton } from '../download-csv-button';
 
+import './style.scss';
+
 export type TableProps = {
   messages: MessageType[][];
   sensors: string[];
@@ -20,33 +22,39 @@ const Table: React.FC<TableProps> = ({ messages, sensors }) => {
     }
   }
 
+  if (!Object.keys(processedData).length) {
+    return <div>Здесь будут табличные данные...</div>;
+  }
+
   return (
     <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Время эксперимента</th>
-            {sensors.map((sensor) => (
-              <th>Сенсор {sensor}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {Object.entries(processedData).map(([time, row]) => (
-            <tr key={time}>
-              <td>{time}</td>
-              {sensors.map((sensor) => (
-                <td>{row[sensor]}</td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
       <DownloadCsvButton
         data={processedData}
         sensors={sensors}
       ></DownloadCsvButton>
+
+      <div className="table-wrapper">
+        <table className="table table-striped">
+          <thead>
+            <tr>
+              <th>Время, мс</th>
+              {sensors.map((sensor) => (
+                <th>{sensor}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {Object.entries(processedData).map(([time, row]) => (
+              <tr key={time}>
+                <td>{time}</td>
+                {sensors.map((sensor) => (
+                  <td>{row[sensor]}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

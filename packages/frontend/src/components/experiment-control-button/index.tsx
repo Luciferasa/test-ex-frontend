@@ -56,8 +56,12 @@ const ExperimentControlButton: React.FC<ExperimentControlButtonProps> = ({
   };
 
   return isConnected ? (
-    <button className="button" onClick={handleExperimentStart}>
-      {isExperimentStarted ? 'Стоп' : 'Старт'}
+    <button
+      type="button"
+      className="btn btn-primary"
+      onClick={handleExperimentStart}
+    >
+      {isExperimentStarted ? 'Стоп' : 'Начать эксперимент'}
     </button>
   ) : (
     ''

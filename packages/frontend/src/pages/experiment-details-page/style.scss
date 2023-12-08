@@ -1,9 +1,14 @@
-.button {
-  width: 100px;
-  height: fit-content;
-}
-
 .experiment-details {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+
+  &__start {
+    align-self: center;
+  }
+
+  &__data {
+    display: flex;
+    gap: 20px;
+  }
 }
