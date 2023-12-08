@@ -18,6 +18,9 @@ const App = () => {
             <Link className="aside-menu__link" to="/experiments-list">
               Список экспериментов
             </Link>
+            <Link className="aside-menu__link" to="/experiment-detail">
+              Страница эксперимента
+            </Link>
           </nav>
         </aside>
         <main className="app-container__main">
